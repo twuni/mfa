@@ -1,6 +1,6 @@
 {
   "name": "@twuni/mfa",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "module": "src/index.mjs",
   "scripts": {
     "lint": "eslint --ext mjs src",
@@ -16,16 +16,16 @@
   },
   "exports": {
     ".": {
-      "import": "src/index.mjs"
+      "import": "./src/index.mjs"
     },
-    "challenge": {
-      "import": "src/challenge.mjs"
+    "./challenge": {
+      "import": "./src/challenge.mjs"
     },
-    "provision": {
-      "import": "src/provision.mjs"
+    "./provision": {
+      "import": "./src/provision.mjs"
     },
-    "verify": {
-      "import": "src/verify.mjs"
+    "./verify": {
+      "import": "./src/verify.mjs"
     }
   },
   "license": "MIT",
