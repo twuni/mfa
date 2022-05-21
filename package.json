@@ -1,0 +1,54 @@
+{
+  "name": "@twuni/mfa",
+  "version": "0.0.1",
+  "module": "src/index.mjs",
+  "scripts": {
+    "lint": "eslint --ext mjs src",
+    "test": "c8 --100 --reporter lcov node src/test.mjs"
+  },
+  "author": {
+    "email": "devin@canterberry.cc",
+    "name": "Devin Canterberry"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/twuni/mfa"
+  },
+  "exports": {
+    ".": {
+      "import": "src/index.mjs"
+    },
+    "challenge": {
+      "import": "src/challenge.mjs"
+    },
+    "provision": {
+      "import": "src/provision.mjs"
+    },
+    "verify": {
+      "import": "src/verify.mjs"
+    }
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "c8": "^7.11.3",
+    "eslint": "^8.16.0",
+    "eslint-plugin-ante": "^1.1.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "es2022": true,
+      "node": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:ante/recommended",
+      "plugin:ante/style"
+    ],
+    "parserOptions": {
+      "sourceType": "module"
+    },
+    "plugins": [
+      "eslint-plugin-ante"
+    ]
+  }
+}
